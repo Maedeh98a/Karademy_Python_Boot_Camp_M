@@ -1,3 +1,7 @@
+#in this program we enter the list of numbers 
+#then we enter number
+#we find tow number in list that summation of them is equall to input number
+
 input_list = input("please input numbers for list :").split(",")
 input_num = int(input("please enter your number :"))
 

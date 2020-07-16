@@ -1,4 +1,5 @@
-# input number , then detect prime number bitween that number and squre of number, show prime number in list 
+# in this program we enter the number and calculate squre of number 
+# our goal in this program is that find prime number between input and its squre 
 
 first_num = int(input("enter your number:"))
 squre_num = first_num ** 2
