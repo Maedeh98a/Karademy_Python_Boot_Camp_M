@@ -1,4 +1,4 @@
-# in this program we enter the number and calculate squre of number
+# in this program we enter the number and calculate square of number
 # our goal in this program is that find prime number between input and its squre
 
 
@@ -13,7 +13,7 @@ def detect_prime(first_number, second_num, list_num, counter):
         counter = 0
 
 
-first_num = int(input("enter your number:"))
+first_num = int(input("Enter your number:"))
 square_num = first_num ** 2
 count_factor = 0
 all_num = []
