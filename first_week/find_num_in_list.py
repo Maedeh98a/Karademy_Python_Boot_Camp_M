@@ -18,7 +18,7 @@ def find_in_list(entered_list, num, length):
         print("sorry! don't have two number for you :))")
 
 
-input_list = input("please input numbers for list :").split(",")
+input_list = input("please enter numbers for list :").split(",")
 input_num = int(input("please enter your number :"))
 first_length_list = len(input_list)
 input_list = list(map(int, input_list))
