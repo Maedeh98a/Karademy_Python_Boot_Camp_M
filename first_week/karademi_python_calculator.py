@@ -1,77 +1,87 @@
-while(1):
-    
-    print(" 1 - / \n 2 - ^ \n 3 - + \n 4 - - \n 5 - * \n")
-    operand = int(input("select an operand by character:\n"))
-    if operand < 1 or operand > 5:
-        operand = int(input("select an operand by character:\n"))
-    first_num  = int(input("enter your first number(you can choose number less than 2,147,483,647 or greater than -2,147,483,648)\n"))
-    if first_num >= 2147483647 or first_num <= -2147483648 :
-        first_num  = int(input("is out of range ! please enter your first number again\n"))
- 
-
-    second_num  = int(input("enter your second number(you can choose number less than 2,147,483,647 or greater than -2,147,483,648)\n"))
-    if second_num >= 2147483647 or second_num <= -2147483648 :
-        second_num  = int(input("is out of range ! please enter your second number again\n"))
+def power_supply(first_num, second_num):
+    power_result = first_num ** second_num
+    return power_result
 
 
-    if operand == 1 :
+def summation(first_num, second_num):
+    sum_result = first_num + second_num
+    return sum_result
+
+
+def submission(first_num, second_num):
+    submission_result = first_num - second_num
+    return submission_result
+
+
+def multiplication(first_num, second_num):
+    multiplication_result = first_num * second_num
+    return multiplication_result
+
+
+result = 0
+operator = 0
+while operator != 6:
+    try:
+        input_num = int(input("enter your number\n"))
+    except ValueError:
+        print("you should enter integer:")
+
+    try:
+        operator = int(
+            input(
+                "select an operator by number:\n"
+                "1 - division \n "
+                "2 - power  \n "
+                "3 - summation \n "
+                "4 - submission \n "
+                "5 - multiplication \n "
+                "6 - quit \n"
+            )
+        )
+        if operator < 1 or operator > 6:
+            print("you are wrong! please choose between 1 - 6")
+            operator = int(
+                input(
+                    "select an operand by number:\n"
+                    "1 - division \n "
+                    "2 - power  \n "
+                    "3 - summation \n "
+                    "4 - submission \n "
+                    "5 - multiplication \n "
+                    "6 - quit \n"
+                )
+            )
+    except ValueError:
+        print("you should enter integer:")
+
+    if operator == 1:
         try:
-            result = first_num/second_num
-            print(result)
-            print("\n")
-            print("\n")
-
+            previous_result = result
+            result = result / input_num
+            print(f"{previous_result} / {input_num} = {result}\n")
 
         except ZeroDivisionError:
 
             print("cannot divide by zero\n")
-            first_num  = int(input("enter your first number\n"))
-            second_num  = int(input("enter your second number\n"))
-    
-    elif operand == 2 :
-        result = first_num ** second_num
-        if result >= 2147483647 or result <= -2147483648 :
-             print("you should try again! this result is out of range!")
-             first_num  = int(input("enter your first number\n"))
-             second_num  = int(input("enter your second number\n"))
-        else:
-            print(result)
-            print("\n")
-            print("\n")
 
-    
-    elif operand == 3 :
-        result = first_num + second_num
-        if result >= 2147483647 or result <= -2147483648 :
-             print("you should try again! this result is out of range!")
-             first_num  = int(input("enter your first number\n"))
-             second_num  = int(input("enter your second number\n"))
-        else:
-            print(result)
-            print("\n")
-            print("\n")
+    elif operator == 2:
+        previous_result = result
+        result = power_supply(result, input_num)
+        print(f"{previous_result} ^ {input_num} = {result}\n")
 
-    
-    elif operand == 4 :
-        result = first_num - second_num
-        if result >= 2147483647 or result <= -2147483648 :
-             print("you should try again! this result is out of range!")
-             first_num  = int(input("enter your first number\n"))
-             second_num  = int(input("enter your second number\n"))
-        else:
-            print(result)
-            print("\n")
-            print("\n")
+    elif operator == 3:
+        previous_result = result
+        result = summation(result, input_num)
+        print(f"{previous_result} + {input_num} = {result}\n")
 
+    elif operator == 4:
+        previous_result = result
+        result = submission(result, input_num)
+        print(f"{previous_result} - {input_num} = {result}\n")
 
-    elif operand == 5:
-        result = first_num * second_num
-        if result >= 2147483647 or result <= -2147483648 :
-             print("you should try again! this result is out of range!")
-             first_num  = int(input("enter your first number\n"))
-             second_num  = int(input("enter your second number\n"))
-        else:
-            print(result)
-            print("\n")
-            print("\n")
+    elif operator == 5:
+        previous_result = result
+        result = multiplication(result, input_num)
+        print(f"{previous_result} * {input_num} = {result}\n")
 
+print("have a good time :)")
