@@ -1,19 +1,39 @@
 def power_supply(first_num, second_num):
+    """
+    :param first_num:
+    :param second_num:
+    :return:
+    """
     power_result = first_num ** second_num
     return power_result
 
 
 def summation(first_num, second_num):
+    """
+    :param first_num:
+    :param second_num:
+    :return:
+    """
     sum_result = first_num + second_num
     return sum_result
 
 
 def submission(first_num, second_num):
+    """
+    :param first_num:
+    :param second_num:
+    :return:
+    """
     submission_result = first_num - second_num
     return submission_result
 
 
 def multiplication(first_num, second_num):
+    """
+    :param first_num:
+    :param second_num:
+    :return:
+    """
     multiplication_result = first_num * second_num
     return multiplication_result
 
