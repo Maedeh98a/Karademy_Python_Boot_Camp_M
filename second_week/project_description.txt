@@ -1,0 +1,8 @@
+Write a python application which can read a file of emails separated by ,
+For instance: test1@gmail.com,test.tester@yahoo.com,....
+create an output using generators, map, filter to:
+1.  username:[EVERYTHING_BEFORE_at_WITHOUT_._ONLY_FOR_GMAIL]
+2.  username:[EVERYTHING_BEFORE_at]
+3. domain name: [EVERYTHING_AFTER_at]
+4. use python classes and methods if possible.
+ 
