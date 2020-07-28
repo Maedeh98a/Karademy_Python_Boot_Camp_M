@@ -10,3 +10,4 @@
 
 #### I want to improve my python abilities , you can follow my codes here:
 #### 1-calculator :  https://github.com/Maedeh98a/Karademy_Python_Boot_Camp_M/blob/master/first_week/karademi_python_calculator.py
+#### 2-python overview (filtering the gmail) : https://github.com/Maedeh98a/Karademy_Python_Boot_Camp_M/blob/master/second_week/python_overview.py
