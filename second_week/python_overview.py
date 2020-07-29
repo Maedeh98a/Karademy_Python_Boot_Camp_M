@@ -1,9 +1,9 @@
 class DetectMail:
     def __init__(self, file):
-        self._file_path_ = file
+        self._file_path = file
 
     def list_file(self):
-        with open(self._file_path_) as FILE:
+        with open(self._file_path) as FILE:
             list_mail = FILE.readlines()
             return list_mail
 
