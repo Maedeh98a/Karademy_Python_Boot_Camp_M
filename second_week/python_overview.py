@@ -1,9 +1,9 @@
-class Detect_mail:
+class DetectMail:
     def __init__(self, file):
-        self.FILE = file
+        self._filepath = file
 
     def list_file(self):
-        with open(self.FILE) as FILE:
+        with open(self._filepath) as FILE:
             list_mail = FILE.readlines()
             return list_mail
 
@@ -39,9 +39,12 @@ class Detect_mail:
 
 
 file_input = input("enter the address of file:")
-my_obj = Detect_mail(file_input)
+my_obj = DetectMail(file_input)
 list_all_mail = my_obj.list_file()
 gmail_elements, non_gmail_mail = my_obj.seperate_email(list_all_mail)
 filtered_mail = list(my_obj.mail_filter(gmail_elements))
 new_not_gmail, new_gmail = my_obj.remove_duplicate(non_gmail_mail, filtered_mail)
+print(new_gmail)
+print()
+print(new_not_gmail)
 my_obj.return_output(new_not_gmail, new_gmail)
